@@ -22,7 +22,7 @@ mkdir /tmp/git
 cd /tmp/git
 wget https://github.com/giuliojiang/pbrt-v3-DRC-docker/archive/master.zip -O pbrt-v3-DRC-docker.zip
 unzip pbrt-v3-DRC-docker.zip
-mv /tmp/git/pbrt-v3-DRC-docker-master/docker/applocal /applocal
+mv /tmp/git/pbrt-v3-DRC-docker-master/docker-from-source/applocal /applocal
 cd /applocal/server
 npm ci
 
