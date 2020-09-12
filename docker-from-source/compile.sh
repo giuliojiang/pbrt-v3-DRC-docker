@@ -10,8 +10,6 @@ rm /tmp/node.sh
 apt-get update
 apt-get install -y nodejs git python3
 apt-get install -y cmake g++ doxygen zlib1g-dev
-mkdir /app
-mkdir /bgreen
 mkdir /output
 wget -O /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x /tmp/miniconda.sh
@@ -38,3 +36,4 @@ mv /tmp/git/pbrt-v3-IILE /app
 cd /tmp
 wget https://github.com/giuliojiang/pbrt-v3-DRC-docker/releases/download/v1/supplementary.tgz -O supplementary.tgz
 tar -vxf supplementary.tgz
+mv /tmp/supplementary/bathroom_green /bgreen
