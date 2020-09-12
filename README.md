@@ -1,5 +1,15 @@
 # pbrt-v3-DRC-docker
 
+## Docker from source
+
+Intended for those looking for a 1-step build process for pbrt-v3-DRC
+
+Simply CD into `docker-from-source` and run `./build.sh`
+
+## Docker from pre-built
+
+I use these for a faster dev cycle, as these scripts rely on some external files and already built DRC binaries.
+
 Use `build.sh` in `docker/` to build.
 
 This depends on some external folders and repositories:
