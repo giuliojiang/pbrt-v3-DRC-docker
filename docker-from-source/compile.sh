@@ -24,10 +24,17 @@ mkdir /tmp/git
 cd /tmp/git
 wget https://github.com/giuliojiang/pbrt-v3-DRC-docker/archive/master.zip -O pbrt-v3-DRC-docker.zip
 unzip pbrt-v3-DRC-docker.zip
-cp -R /tmp/git/pbrt-v3-DRC-docker-master/docker/applocal /applocal
+mv /tmp/git/pbrt-v3-DRC-docker-master/docker/applocal /applocal
+cd /applocal/server
+npm ci
 
 cd /tmp/git
 git clone --recursive https://github.com/giuliojiang/pbrt-v3-IILE/
 cd pbrt-v3-IILE
 python3 compile.py
 wget -O iispt_model.tch "https://github.com/giuliojiang/pbrt-v3-IISPT-dataset/releases/download/v4/iispt_model_f1.tch"
+mv /tmp/git/pbrt-v3-IILE /app
+
+cd /tmp
+wget https://github.com/giuliojiang/pbrt-v3-DRC-docker/releases/download/v1/supplementary.tgz -O supplementary.tgz
+tar -vxf supplementary.tgz

@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
 ENV PATH="/miniconda/bin:${PATH}"
+ARG DEBIAN_FRONTEND=noninteractive
 
 COPY compile.sh /tmp/compile.sh
 
